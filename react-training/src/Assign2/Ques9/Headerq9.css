@@ -1,0 +1,9 @@
+.head-dark{
+    background-color: rgb(4, 4, 4);
+    color:azure
+}
+
+.head-light{
+    background-color: azure;
+    color: black;
+}
