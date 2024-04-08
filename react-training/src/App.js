@@ -10,6 +10,8 @@ import UserCard from './Assignment-1/Ques2';
 import Assignment2 from './Assign2/Assignment-2';
 import Assignment3 from './Assignment3/Assignment3';
 import Divider from './Assignment3/Divider';
+import Assignment4 from './Assignment4/Assignment4';
+
 
 
 
@@ -50,6 +52,11 @@ function App() {
       <Divider />
       <h1>Assignment 3</h1>
       <Assignment3 />
+
+      <Divider />
+      <h1>Assignment4</h1>
+      <Assignment4 />
+
       
       
     </div>

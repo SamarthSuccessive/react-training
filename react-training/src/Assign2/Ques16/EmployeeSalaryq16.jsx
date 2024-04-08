@@ -20,16 +20,17 @@ function EmployeeSalaryq16() {
       { name: 'Harry', salary: 2 },
       { name: 'Kushagra', salary: 10 }]);
  
-  const calculateAvgSalary = (emp) => {
-    let totalSalary = emp.reduce((acc, curr) => {
-      return acc + curr.salary;
-    }, 0);
-    return totalSalary / emp.length;
-  };
+  
 
   const avgSalary = useMemo(() => {
+    const calculateAvgSalary = (emp) => {
+      let totalSalary = emp.reduce((acc, curr) => {
+        return acc + curr.salary;
+      }, 0);
+      return totalSalary / emp.length;
+    };
     return calculateAvgSalary(employee);
-  }, [employee,calculateAvgSalary]);
+  }, [employee]);
 
   const updateChanges=()=>{
     const newEmployeeArray=[...employee];
