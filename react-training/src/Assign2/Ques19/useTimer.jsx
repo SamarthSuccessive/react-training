@@ -3,9 +3,6 @@ import  { useEffect, useState } from 'react'
 function useTimer(time) {
     const [timer,setTimer]=useState(0);
     const [run,setRun]=useState(false);
-    
-
-  
     useEffect(()=>{
         let interval;
         if(run)
@@ -33,7 +30,6 @@ function useTimer(time) {
     function reset()
     {
         setTimer(0);
-        
     }
   return {timer,start,pause,reset};
 }

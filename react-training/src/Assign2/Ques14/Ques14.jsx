@@ -5,15 +5,16 @@
 // Ensure that clicking the "Complete" button for one task doesn't trigger unnecessary re-renders for other tasks.
 
 
-import React,{useCallback, useState} from 'react'
+import { useCallback, useState} from 'react'
 
 function Ques14() {
+    
     const [tasks,setTasks]=useState([{task:'play',buttonvalue:'Complete'},{task:'watching tv',buttonvalue:'Complete'},{task:'Listening Music',buttonvalue:'Complete'}]);
     const clickHandler=useCallback((index)=>{
     const newTasks=[...tasks];
     newTasks[index].buttonvalue='Completed';
     setTasks(newTasks);
-   },[tasks])
+   },[tasks]);
 
   return (
     <>
@@ -22,6 +23,7 @@ function Ques14() {
         tasks.map((item,index)=>( 
             <div key={index}>
                 <p>{item.task}</p>
+                {console.log("task: ", item, index)}
                 <button onClick={()=>clickHandler(index)}>{item.buttonvalue}</button>
             </div>
         )
