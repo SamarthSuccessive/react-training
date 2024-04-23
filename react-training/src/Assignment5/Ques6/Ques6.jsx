@@ -20,7 +20,7 @@ function Ques6() {
         } else {
           throw new Error("Error : Request Fails");
         }
-      })
+      })            
       .catch((error) => {
         setError(error.message || "An error occurred");
         setStatus(false);

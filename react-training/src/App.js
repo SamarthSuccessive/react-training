@@ -12,6 +12,7 @@ import Assignment3 from './Assignment3/Assignment3';
 import Divider from './Assignment3/Divider';
 import Assignment4 from './Assignment4/Assignment4';
 import Assignment5 from './Assignment5/Assignment5';
+import Assignment6 from './Assignment6/Assignment6';
 
 
 
@@ -60,6 +61,9 @@ function App() {
       <Divider />
       <h1>Assignment5</h1>
       <Assignment5 />
+      <Divider />
+      <h1>Assignment6</h1>
+      <Assignment6 />
 
       
       
