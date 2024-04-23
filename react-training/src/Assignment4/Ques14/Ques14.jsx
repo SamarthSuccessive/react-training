@@ -19,12 +19,14 @@ const initialValues = {
 
 const SignInForm = () => {
   const [data,setData]=useState({});
+  const [show,setShow]=useState("");
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={signInSchema}
       onSubmit={(values) => {
         setData(values);
+        console.log(show);
         console.log(values);
 
       }}
@@ -43,7 +45,7 @@ const SignInForm = () => {
                   variant="outlined"
                   onChange={handleChange}
                   error={errors.email && touched.email}
-                  helperText={errors.email && touched.email ? errors.email : ""}
+                  helperText={errors.email && touched.email ? setShow(errors.email) :setShow("") }
                 />
               </div>
               <br />
@@ -57,15 +59,15 @@ const SignInForm = () => {
                   onChange={handleChange}
                   error={errors.password && touched.password}
                   helperText={
-                    errors.password && touched.password ? errors.password : ""
+                    errors.password && touched.password ? setShow(errors.password) : ""
                   }
                 />
               </div>
 
               <button
                 type="submit"
-                className={!(dirty && isValid) ? "disabled-btn" : ""}
-                disabled={!(dirty && isValid)}
+                // className={!(dirty && isValid) ? "disabled-btn" : ""}
+                // disabled={!(dirty && isValid)}
               >
                 Sign In
               </button>
